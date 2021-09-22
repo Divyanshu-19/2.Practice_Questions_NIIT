@@ -5,7 +5,7 @@ public class DigitalCalander
 	public static void main(String[] args) {
 	    Scanner sc = new Scanner(System.in);
 	    
-		System.out.println("Enter month(Press 1 for Jan, 2 for Feb, 12 for Dec....");
+		System.out.println("Enter month(Press 1 for Jan, 2 for Feb, 12 for Dec....)");
 		int month = sc.nextInt();
 		System.out.println("Enter Year:");
 		int year = sc.nextInt();
@@ -16,12 +16,13 @@ public class DigitalCalander
 		int daysInMonth = daysInMonth(month, year);
 		for(int i=0; i<daysInMonth; i++){
 		    if(i==0){
-		        for(int j=0; j<dayofWeek; j++){
+		        int spaceGap = dayofWeek%7;
+		        for(int j=0; j<spaceGap; j++){
 		            System.out.print("   ");
 		        }
 		    }
 		    if(i<9){
-		        System.out.print(" "+i+1+" ");
+		        System.out.print(" "+(i+1)+" ");
 		    }
 		    else{
 		        System.out.print(i+1+" ");
@@ -54,4 +55,3 @@ public class DigitalCalander
 	
 	
 }
-
